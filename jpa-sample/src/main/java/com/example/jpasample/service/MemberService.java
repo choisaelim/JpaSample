@@ -12,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class MemberService {
+	// MemberRepository에 JPaRepository<Member, Long> extend해서 사용
 	private final MemberRepository memberRepository;
 
 	public List<Member> getMember() {

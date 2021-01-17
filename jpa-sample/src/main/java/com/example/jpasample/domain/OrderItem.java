@@ -22,6 +22,7 @@ public class OrderItem {
 
     private Item item;
 
+    // Order에 있는 mappedby = 매핑되는 변수명과 동일
     @ManyToOne(fetch = FetchType.LAZY)
     private Order order;
 
