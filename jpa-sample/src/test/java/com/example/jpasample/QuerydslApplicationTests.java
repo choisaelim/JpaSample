@@ -31,9 +31,11 @@ public class QuerydslApplicationTests {
     JPAQueryFactory query = new JPAQueryFactory(em);
     QMember qMember = QMember.member;
 
-    // query.selectFrom(qMember).fetchAll().
+    // Member result = query.selectFrom(qMember).fetchOne();
 
+    List<Member> list = query.selectFrom(qMember).fetch();
     // Assertions.assertThat(result).isEqualTo(member);
     // Assertions.assertThat(result.getId()).isEqualTo(member.getId());
+    Assertions.assertThat(list.size()).isGreaterThan(0);
   }
 }
