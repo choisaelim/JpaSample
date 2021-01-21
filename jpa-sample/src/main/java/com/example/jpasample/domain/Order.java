@@ -31,9 +31,9 @@ public class Order {
   @Column(name = "ORDER_ID")
   private Long id;
 
-  @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "MEMBER_ID")
-  private Member member;
+  // @ManyToOne(fetch = FetchType.LAZY)
+  // @JoinColumn(name = "MEMBER_ID")
+  // private Member member;
 
   // Order - OrderItem 1:* 관계이므로 Order는 onetomany,
   // List는 초기화
@@ -42,7 +42,7 @@ public class Order {
   private List<OrderItem> orderItems = new ArrayList<OrderItem>();
 
   // mappedby 빠져야 되는지?
-  @OneToOne(mappedBy = "order", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+  @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
   private Delivery delivery;
 
   private LocalDateTime orderDate;

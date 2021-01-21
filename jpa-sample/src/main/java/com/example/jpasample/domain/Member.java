@@ -1,5 +1,6 @@
 package com.example.jpasample.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.jdo.annotations.Column;
@@ -30,7 +31,7 @@ public class Member {
   @Embedded
   private Address address;
 
-  @OneToMany(mappedBy = "member")
-  private List<Order> orders;
+  // @OneToMany(mappedBy = "member")
+  // private List<Order> orders = new ArrayList<Order>();
 
 }

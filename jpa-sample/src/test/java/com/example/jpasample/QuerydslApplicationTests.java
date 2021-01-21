@@ -1,5 +1,7 @@
 package com.example.jpasample;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 
 import com.example.jpasample.domain.Member;
@@ -29,9 +31,9 @@ public class QuerydslApplicationTests {
     JPAQueryFactory query = new JPAQueryFactory(em);
     QMember qMember = QMember.member;
 
-    Member result = query.selectFrom(qMember).fetchOne();
+    // query.selectFrom(qMember).fetchAll().
 
-    Assertions.assertThat(result).isEqualTo(member);
-    Assertions.assertThat(result.getId()).isEqualTo(member.getId());
+    // Assertions.assertThat(result).isEqualTo(member);
+    // Assertions.assertThat(result.getId()).isEqualTo(member.getId());
   }
 }

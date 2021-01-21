@@ -21,6 +21,6 @@ public class Category {
     @Column(name = "ORDER_ID")
     private Long id;
     private String name;
-    private List<Item> items;
+    // private List<Item> items = new ArrayList<Item>();
 
 }
